@@ -1,0 +1,22 @@
+{
+  "name": "bs1",
+  "version": "1.0.0",
+  "description": "",
+  "main": "lib/src/main.js",
+  "dependencies": {
+    "bs-platform": "^1.4.3",
+    "bucklescript-tea": "^0.2.3"
+  },
+  "devDependencies": {
+    "watch": "latest",
+    "google-closure-compiler": "latest"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "watchify -s Teaone -o out/main.js lib/js/src/main.js",
+    "minify": "closure-compiler --js lib/goog/src/main.js --js node_modules/bs-platform/lib/goog/*.js --js node_modules/bucklescript-tea/lib/goog/src/*.js --js_output_file out/main.min.js  --compilation_level ADVANCED --language_out ECMASCRIPT5 --dependency_mode STRICT --entry_point goog:hello.main",
+    "minify:watch": "watch 'npm run minify' src"
+  },
+  "author": "",
+  "license": "ISC"
+}

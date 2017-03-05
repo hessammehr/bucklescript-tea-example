@@ -1,0 +1,6 @@
+{
+    "name" : "hello",
+    "sources" : { "dir" :  "src"},
+    "bs-dependencies" : ["bucklescript-tea"],
+    "package-specs" : [ "goog", "amdjs", "commonjs" ]
+}
