@@ -4,14 +4,15 @@
   "description": "",
   "main": "lib/src/main.js",
   "dependencies": {
-    "bs-platform": "^1.5.3",
-    "bucklescript-tea": "^0.2.3"
+    "bs-platform": "^1.6.0",
+    "bucklescript-tea": "latest"
   },
   "devDependencies": {
     "google-closure-compiler": "latest",
-    "rollup", "latest",
+    "rollup": "latest",
     "rollup-plugin-node-resolve": "^2.0.0",
     "rollup-watch": "^3.2.2",
+    "uglifyjs": "^2.4.10",
     "watch": "latest"
   },
   "scripts": {
@@ -20,6 +21,7 @@
     "minify:goog": "closure-compiler --js lib/goog/src/main.js --js node_modules/bs-platform/lib/goog/*.js --js node_modules/bucklescript-tea/lib/goog/src/*.js --js_output_file out/main.min.js  --compilation_level ADVANCED --language_out ECMASCRIPT5 --dependency_mode STRICT --entry_point goog:hello.main",
     "minify:goog:watch": "watch 'npm run minify' src",
     "minify:rollup": "rollup -c",
+    "minify:uglify": "uglifyjs -c -m -o out/main.min.js out/main.js",
     "minify:rollup:watch": "rollup -c -w"
   },
   "author": "",
