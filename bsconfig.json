@@ -3,3 +3,4 @@
     "sources" : { "dir" :  "src"},
     "bs-dependencies" : ["bucklescript-tea"],
     "package-specs" : [ "es6", "goog" ]
+}
