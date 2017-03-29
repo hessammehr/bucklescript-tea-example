@@ -8,7 +8,7 @@ type msg =
   | Set of int (* This will be out message to set the counter to a specific value *)
   [@@bs.deriving {accessors}]
 
-let init () = 12
+let init () = 32
 
 (* This is the central message handler, it takes the model as the first argument *)
 let update model = function (* These should be simple enough to be self-explanatory, mutate the model based on the message, easy to read and follow *)
